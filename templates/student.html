@@ -1,0 +1,13 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<h1>this is the student page</h1>
+<h4>Boodschap van de leraar:</h4>
+{% for task in tasks %}
+<p>{{task}}</p>
+<form action="/done">
+    <input type="hidden" name="user" value="{{user}}" />
+    <input type="submit" value="done" />
+</form>
+{% endfor %}
+{% endblock %}

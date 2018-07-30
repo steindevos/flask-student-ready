@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<h1>This is the teacher page</h1>
+<form method="post" type="textarea" action="/new-task">
+    <p><input type="text" name="task" value="" /></p>
+    <p><input type="submit" value="set task"/></p>
+</form>
+<h1>{{ page_title }}</h1>
+<hr>
+{% for student in students_finished %}
+<p>{{student}} is ready</p>
+{% endfor %}
+{% endblock %}
